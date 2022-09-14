@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
 </head>
+
 <body>
+
+    <header>
+        <form action="">
+            <label for="buscador-productos">Busca tu producto</label>
+            <input type="search" id="buscador-productos" name="buscador" placeholder="Buscar">
+            <button id="btn-buscador-productos">Search</button>
+        </form>
+    </header>
+
+    <aside>
+        <h3>Categorias</h3>
+        <form>
+            <label for="filtro-procesador">Procesador</label>
+            <input type="radio" id="filtro-procesador" name="categoria">
+            <label for="filtro-placa">Placa de Video</label>
+            <input type="radio" id="filtro-placa" name="categoria">
+            <label for="filtro-mother">Motherboard</label>
+            <input type="radio" id="filtro-mother" name="categoria">
+            <label for="filtro-gabinete">Gabinete</label>
+            <input type="radio" id="filtro-gabinete" name="categoria">
+            <button id="btn-categoria">Aplicar</button>
+        </form>
+
+        <h3>Marcas</h3>
+        <form>
+            <label for="filtro-intel">Intel</label>
+            <input type="radio" name="marca" id="filtro-intel">
+            <label for="filtro-amd">AMD</label>
+            <input type="radio" name="marca" id="filtro-amd">
+            <label for="filtro-asus">ASUS</label>
+            <input type="radio" name="marca" id="filtro-asus">
+            <label for="filtro-msi">MSI</label>
+            <input type="radio" name="marca" id="filtro-msi">
+            <label for="filtro-gigabyte">Gigabyte</label>
+            <input type="radio" name="marca" id="filtro-gigabyte">
+            <label for="filtro-cooler_master">Cooler Master</label>
+            <input type="radio" name="marca" id="filtro-cooler_master">
+            <label for="filtro-thermaltake">Thermaltake</label>
+            <input type="radio" name="marca" id="filtro-thermaltake">
+            <button id="btn-marca">Aplicar</button>
+        </form>
+
+        <h3>Rango de Precios</h3>
+        <form>
+            <label for="precioMinimo">Minimo</label>
+            <input type="number" id="precioMinimo">
+            <label for="precioMaximo">Maximo</label>
+            <input type="number" id="precioMaximo">
+            <button id="btn-precio">Aplicar</button>
+        </form>
+    </aside>
+
+    <main>
+        <div class="modal-carrito">
+            <div id="contenedor-carrito">  
+            </div>
+            <p>Precio Total: $<span id="precioTotal">0</span></p>
+            <button id="btn-reset">Resetear Filtros</button>
+        </div>
+
+
+        <section class="contenedor-productos" id="contenedor-productos">
+        </section>
+    </main>
+
 
 
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>
+
